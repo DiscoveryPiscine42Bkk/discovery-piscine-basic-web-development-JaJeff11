@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profiles us</title>
+
+<style>
+  body {
+    font-family: monospace, sans-serif;
+    background: #ffffff;       /* พื้นหลังดำ /
+    color: #000000;            / ตัวอักษรขาว /
+    margin: 0;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
+  .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: #ffffff;       / กล่องสีดำเข้ม /
+    border: 2px solid #000000; / ขอบขาว /
+    width: 45%;
+    padding: 40px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    background: #ffffff;       / สีเข้มขึ้นตอน hover /
+    border-color: #ff0000;  / ขอบฟ้าตอนชี้ /
+    transform: scale(1.02);
+  }
+
+  .icon {
+    font-size: 70px;
+    text-shadow: 0 0 15px #ff0000; / เงาสีฟ้า /
+  }
+
+  .card h3 {
+    text-decoration: underline;
+    margin: 10px 0;
+  }
+
+  .card p {
+    color: #ccc;            / สีเทาอ่อน */
+  }
+</style>
+
+<script>
+  function selectProfile(id) {
+    if (id === "profile1") {
+      window.location.href = "Peem.html";
+    } else if (id === "profile2") {
+      window.location.href = "nutt.html";
+    }
+  }
+</script>
+</head>
+
+<body>
+  <h1>Profiles us</h1>
+
+  <div class="profiles">
+    <div class="card" id="profile1" onclick="selectProfile('profile1')">
+      <h3>Ratanabhumi Mahing</h3>
+    </div>
+
+    <div class="card" id="profile2" onclick="selectProfile('profile2')">
+      <h3>Nuttakit Suknee</h3>
+    </div>
+  </div>
+</body>
+</html>
